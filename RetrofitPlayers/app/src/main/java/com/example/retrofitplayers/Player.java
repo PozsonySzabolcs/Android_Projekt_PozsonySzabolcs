@@ -13,17 +13,6 @@ public class Player {
     @Expose
     private String name;
 
-    @Override
-    public String toString() {
-        return "Player{" +
-                "teamId=" + teamId +
-                ", name='" + name + '\'' +
-                ", teamName='" + teamName + '\'' +
-                ", position='" + position + '\'' +
-                ", jerseyNumber=" + jerseyNumber +
-                '}';
-    }
-
     @SerializedName("teamName")
     @Expose
     private String teamName;
@@ -110,6 +99,17 @@ public class Player {
 
     public void setJerseyNumber(int jerseyNumber) {
         this.jerseyNumber = jerseyNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "teamId=" + teamId +
+                ", name='" + name + '\'' +
+                ", teamName='" + teamName + '\'' +
+                ", position='" + position + '\'' +
+                ", jerseyNumber=" + jerseyNumber +
+                '}';
     }
 
 }
